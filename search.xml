@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[雪花测试]]></title>
+    <url>%2F2018%2F07%2F24%2F%E9%9B%AA%E8%8A%B1%E6%B5%8B%E8%AF%95%2F</url>
+    <content type="text"><![CDATA[下雪 document.getElementById('showSnow180724').addEventListener('click',showSnow,false) function showSnow(){ // 存储所有的雪花 const snows = []; // 下落的加速度 const G = 0.01; var a =true const fps = 60; // 速度上限，避免速度过快 const SPEED_LIMIT_X = 1; const SPEED_LIMIT_Y = 1; const W = window.innerWidth; const H = window.innerHeight; let tickCount = 150; let ticker = 0; let lastTime = Date.now(); let deltaTime = 0; let canvas = null; let ctx = null; let snowImage = null; window.requestAnimationFrame = (function() { return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) { setTimeout(callback, 1000 / fps); } })(); init(); function init() { createCanvas(); canvas.width = W; canvas.height = H; canvas.style.cssText = 'position: fixed; top: 0; left: 0; pointer-events: none;'; document.body.appendChild(canvas); // 小屏幕时延长添加雪花时间，避免屏幕上出现太多的雪花 if(W < 768) { tickCount = 350; } snowImage = new Image(); snowImage.src = 'http://218.75.110.40:9104/hVisual/resource/hVisual/swt/snow.png'; loop(); } function loop() { if(a){ requestAnimationFrame(loop);}else{ cancelAnimationFrame(loop);} ctx.clearRect(0, 0, W, H); const now = Date.now(); deltaTime = now - lastTime; lastTime = now; ticker += deltaTime; if(ticker > tickCount) { snows.push( new Snow(Math.random() * W, 0, Math.random() * 5 + 5) ); ticker %= tickCount; } const length = snows.length; snows.map(function(s, i) { s.update(); s.draw(); if(s.y >= H) { snows.splice(i, 1); } }); } function Snow(x, y, radius) { this.x = x; this.y = y; this.sx = 0; this.sy = 0; this.deg = 0; this.radius = radius; this.ax = Math.random() < 0.5 ? 0.005 : -0.005; } Snow.prototype.update = function() { const deltaDeg = Math.random() * 0.6 + 0.2; this.sx += this.ax; if(this.sx >= SPEED_LIMIT_X || this.sx]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[图片测试]]></title>
     <url>%2F2018%2F07%2F23%2F%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95%2F</url>
     <content type="text"><![CDATA[]]></content>
