@@ -1849,7 +1849,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d51da3;
+  background: #b95bff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3109,14 +3109,7 @@ ul.breadcrumb li+li:last-child {
   border-radius: 4px;
   color: #fff;
   font-size: 16px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
 .btn_customer.success {
   background: #67c23a;
