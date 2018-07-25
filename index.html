@@ -312,6 +312,183 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/25/js设计模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大宝">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="安排">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/25/js设计模式/" itemprop="url">
+                  js设计模式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:33:19" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><div class="btn_customer success" onclick="init('heart')">爱心飘</div></p>
+<p><div class="btn_customer danger" onclick="cancel()">取消</div></p>
+<p></p><p>单例模式:<br>&emsp;&emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。<br>&emsp;&emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。<br></p><p></p>
+<p></p><p id="test180725"> </p><p></p>
+<p><input id="name180725" type="text" placeholder="请输入名字"></p>
+<p><input id="hobby180725" type="text" placeholder="请输入爱好"></p>
+<p><div class="btn_customer success" onclick="set180725()">新建单例</div></p>
+<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    class danli180725 {
+        constructor(name, hobby) {
+            this.name = name;
+            this.hobby = hobby;
+        }
+        describe() {
+            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby;
+        }
+    };
+    var instance = null;
+    var proxyMode180725 = function(name,hobby){
+        if(!instance){
+            instance = new danli180725(name, hobby);
+        }
+        return instance;
+    }
+    function set180725(){
+        var name = document.getElementById('name180725').value;
+        var hobby = document.getElementById('hobby180725').value;
+        if(!name){
+            name = '默认宝';
+        }
+        if(!hobby){
+            hobby = '默认吃';
+        }
+        var danli = proxyMode180725(name,hobby);
+        danli.describe();
+    }
+</script>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/24/雪花测试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -793,7 +970,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
