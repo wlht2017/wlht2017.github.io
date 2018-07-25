@@ -358,7 +358,7 @@
                 
               
 
-              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:36:58" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
+              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:43:32" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
             
 
             
@@ -408,34 +408,34 @@
 <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-//    class danli180725 {
-//        constructor(name, hobby) {
-//            this.name = name;
-//            this.hobby = hobby;
-//        }
-//        describe() {
-//            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby;
-//        }
-//    };
-//    var instance = null;
-//    var proxyMode180725 = function(name,hobby){
-//        if(!instance){
-//            instance = new danli180725(name, hobby);
-//        }
-//        return instance;
-//    }
-//    function set180725(){
-//        var name = document.getElementById('name180725').value;
-//        var hobby = document.getElementById('hobby180725').value;
-//        if(!name){
-//            name = '默认宝';
-//        }
-//        if(!hobby){
-//            hobby = '默认吃';
-//        }
-//        var danli = proxyMode180725(name,hobby);
-//        danli.describe();
-//    }
+    class danli180725 {
+        constructor(name, hobby) {
+            this.name = name;
+            this.hobby = hobby;
+        }
+        describe() {
+            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby;
+        }
+    };
+    let instance = null;
+    let proxyMode180725 = function(name,hobby){
+        if(!instance){
+            instance = new danli180725(name, hobby);
+        }
+        return instance;
+    }
+    function set180725(){
+        let name = document.getElementById('name180725').value;
+        let hobby = document.getElementById('hobby180725').value;
+        if(!name){
+            name = '默认宝';
+        }
+        if(!hobby){
+            hobby = '默认吃';
+        }
+        let danli = proxyMode180725(name,hobby);
+        danli.describe();
+    }
 </script>
           
         
