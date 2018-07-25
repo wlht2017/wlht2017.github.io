@@ -108,17 +108,17 @@
 
 
 
-  <meta name="description" content="爱心飘 取消 单例模式:&amp;emsp;&amp;emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。&amp;emsp;&amp;emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。     新建单例        class danli180725 {">
+  <meta name="description" content="爱心飘 取消 单例模式:&amp;emsp;&amp;emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。&amp;emsp;&amp;emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。     新建单例    //    class danli180725 {">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js设计模式">
 <meta property="og:url" content="http://yoursite.com/2018/07/25/js设计模式/index.html">
 <meta property="og:site_name" content="安排">
-<meta property="og:description" content="爱心飘 取消 单例模式:&amp;emsp;&amp;emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。&amp;emsp;&amp;emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。     新建单例        class danli180725 {">
+<meta property="og:description" content="爱心飘 取消 单例模式:&amp;emsp;&amp;emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。&amp;emsp;&amp;emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。     新建单例    //    class danli180725 {">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-25T12:33:19.843Z">
+<meta property="og:updated_time" content="2018-07-25T12:36:58.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js设计模式">
-<meta name="twitter:description" content="爱心飘 取消 单例模式:&amp;emsp;&amp;emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。&amp;emsp;&amp;emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。     新建单例        class danli180725 {">
+<meta name="twitter:description" content="爱心飘 取消 单例模式:&amp;emsp;&amp;emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。&amp;emsp;&amp;emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。     新建单例    //    class danli180725 {">
 
 
 
@@ -357,7 +357,7 @@
                 
               
 
-              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:33:19" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
+              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:36:58" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
             
 
             
@@ -405,34 +405,34 @@
 <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-    class danli180725 {
-        constructor(name, hobby) {
-            this.name = name;
-            this.hobby = hobby;
-        }
-        describe() {
-            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby;
-        }
-    };
-    var instance = null;
-    var proxyMode180725 = function(name,hobby){
-        if(!instance){
-            instance = new danli180725(name, hobby);
-        }
-        return instance;
-    }
-    function set180725(){
-        var name = document.getElementById('name180725').value;
-        var hobby = document.getElementById('hobby180725').value;
-        if(!name){
-            name = '默认宝';
-        }
-        if(!hobby){
-            hobby = '默认吃';
-        }
-        var danli = proxyMode180725(name,hobby);
-        danli.describe();
-    }
+//    class danli180725 {
+//        constructor(name, hobby) {
+//            this.name = name;
+//            this.hobby = hobby;
+//        }
+//        describe() {
+//            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby;
+//        }
+//    };
+//    var instance = null;
+//    var proxyMode180725 = function(name,hobby){
+//        if(!instance){
+//            instance = new danli180725(name, hobby);
+//        }
+//        return instance;
+//    }
+//    function set180725(){
+//        var name = document.getElementById('name180725').value;
+//        var hobby = document.getElementById('hobby180725').value;
+//        if(!name){
+//            name = '默认宝';
+//        }
+//        if(!hobby){
+//            hobby = '默认吃';
+//        }
+//        var danli = proxyMode180725(name,hobby);
+//        danli.describe();
+//    }
 </script>
       
     </div>
