@@ -358,7 +358,7 @@
                 
               
 
-              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:02:57" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
+              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:10:20" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
             
 
             
@@ -410,27 +410,33 @@
 <script>
     class danli180725 {
         constructor(name, hobby) {
-            this.name = name
-            this.hobby = hobby
+            this.name = name;
+            this.hobby = hobby;
         }
         describe() {
-            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby
+            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby;
         }
-    }
+    };
     var proxyMode180725 = (function(){
-        var instance = null
+        var instance = null;
         return function(name,hobby){
             if(!instance){
-                instance = new danli180725(name, hobby)
+                instance = new danli180725(name, hobby);
             }
-            return instance
+            return instance;
         }
-    })()
+    })();
     function set180725(){
-        var name = document.getElementById('name180725').value
-        var hobby = document.getElementById('hobby180725').value
-        var danli = proxyMode180725(name = '默认宝',hobby = '默认吃')
-        danli.describe()
+        var name = document.getElementById('name180725').value;
+        var hobby = document.getElementById('hobby180725').value;
+        if(!name){
+            name = '默认宝';
+        }
+        if(!hobby){
+            hobby = '默认吃';
+        }
+        var danli = proxyMode180725(name,hobby);
+        danli.describe();
     }
 </script>
           
