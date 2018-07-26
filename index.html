@@ -64,10 +64,10 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://wlht2017-1257187235.cos.ap-shanghai.myqcloud.com/images/apple.png?v=6.3.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://wlht2017-1257187235.cos.ap-shanghai.myqcloud.com/images/apple.png?v=6.3.0">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=6.3.0" color="#222">
@@ -358,12 +358,24 @@
                 
               
 
-              <time title="创建时间：2018-07-25 18:51:20 / 修改时间：20:43:32" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
+              <time title="创建时间：2018-07-25 18:51:20" itemprop="dateCreated datePublished" datetime="2018-07-25T18:51:20+08:00">2018-07-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-07-26 11:41:23" itemprop="dateModified" datetime="2018-07-26T11:41:23+08:00">2018-07-26</time>
               
             
           </span>
@@ -397,47 +409,16 @@
 
       
         
-          
-            <p><div class="btn_customer success" onclick="init('heart')">爱心飘</div></p>
+          <p><div class="btn_customer success" onclick="init('heart')">爱心飘</div></p>
 <p><div class="btn_customer danger" onclick="cancel()">取消</div></p>
-<p></p><p>单例模式:<br>&emsp;&emsp;保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。<br>&emsp;&emsp;适用场景：一个单一对象。比如：新建单例如弹窗提示，无论点击多少次，单例只被被创建一次。<br></p><p></p>
-<p></p><p id="test180725"> </p><p></p>
-<p><input id="name180725" type="text" placeholder="请输入名字"></p>
-<p><input id="hobby180725" type="text" placeholder="请输入爱好"></p>
-<p><div class="btn_customer success" onclick="set180725()">新建单例</div></p>
-<script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
-</script>
-<script>
-    class danli180725 {
-        constructor(name, hobby) {
-            this.name = name;
-            this.hobby = hobby;
-        }
-        describe() {
-            document.getElementById('test180725').innerHTML=this.name + ' 被创建啦,他/她的爱好是 ' + this.hobby;
-        }
-    };
-    let instance = null;
-    let proxyMode180725 = function(name,hobby){
-        if(!instance){
-            instance = new danli180725(name, hobby);
-        }
-        return instance;
-    }
-    function set180725(){
-        let name = document.getElementById('name180725').value;
-        let hobby = document.getElementById('hobby180725').value;
-        if(!name){
-            name = '默认宝';
-        }
-        if(!hobby){
-            hobby = '默认吃';
-        }
-        let danli = proxyMode180725(name,hobby);
-        danli.describe();
-    }
-</script>
-          
+<p></p><p>单例模式:<br>&emsp;&emsp;单例模式的定义：保证一个类仅有一个实例，并提供一个访问它的全局访问点。实现的方法为先判断实例存在与否，如果存在则直接返回，如果不存在就创建了再返回，这就确保了一个类只有一个实例对象。<br>&emsp;&emsp;适用场景：一个单一对象,只被创建一次。<br></p><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/25/js设计模式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -552,7 +533,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-25 20:14:05" itemprop="dateModified" datetime="2018-07-25T20:14:05+08:00">2018-07-25</time>
+                <time title="修改时间：2018-07-26 13:10:54" itemprop="dateModified" datetime="2018-07-26T13:10:54+08:00">2018-07-26</time>
               
             
           </span>
@@ -592,143 +573,7 @@
 <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-    // 存储所有的雪花
-    const snows = [];
-    // 下落的加速度
-    const G = 0.01;
-    const fps = 60;
 
-    // 速度上限，避免速度过快
-    const SPEED_LIMIT_X = 1;
-    const SPEED_LIMIT_Y = 1;
-
-    const W = window.innerWidth;
-    const H = window.innerHeight;
-    let theAnimation
-    let snowing = false 
-    let tickCount = 150;
-    let ticker = 0;
-    let lastTime = Date.now();
-    let deltaTime = 0;
-
-    let canvas = null;
-    let ctx = null;
-
-    let snowImage = null;
-
-    window.requestAnimationFrame = (function() {
-        return window.requestAnimationFrame ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame ||
-            window.oRequestAnimationFrame ||
-            window.msRequestAnimationFrame ||
-            function(callback) {
-                setTimeout(callback, 1000 / fps);
-            }
-    })();
-
-    function cancel() {
-        snowing = false
-        cancelAnimationFrame(theAnimation)
-        $('.snows').css('display','none')
-    }
-
-    function init(type) {
-        if(snowing){
-            return
-        }
-        snowing = true;
-        createCanvas();
-        canvas.width = W;
-        canvas.height = H;
-        canvas.style.cssText = 'position: fixed; top: 0; left: 0; pointer-events: none;';
-        document.body.appendChild(canvas);
-        // 小屏幕时延长添加雪花时间，避免屏幕上出现太多的雪花
-        if(W < 768) {
-            tickCount = 350;
-        }
-
-        snowImage = new Image();
-        switch(type){
-            case 'snow':
-                snowImage.src = 'http://218.75.110.40:9104/hVisual/resource/hVisual/swt/snow.png';
-                 break;
-            case 'heart':
-                snowImage.src = 'http://218.75.110.40:9104/hVisual/resource/hVisual/swt/heartred.png';
-                 break;
-            default:
-                snowImage.src = 'http://218.75.110.40:9104/hVisual/resource/hVisual/swt/snow.png';
-        }
-        loop();
-    }
-
-    function loop() {
-        theAnimation = requestAnimationFrame(loop);
-        ctx.clearRect(0, 0, W, H);
-
-        const now = Date.now();
-        deltaTime = now - lastTime;
-        lastTime = now;
-        ticker += deltaTime;
-
-        if(ticker > tickCount) {
-            snows.push(
-                new Snow(Math.random() * W, 0, Math.random() * 5 + 5)
-            );
-            ticker %= tickCount;
-        }
-
-        const length = snows.length;
-        snows.map(function(s, i) {
-            s.update();
-            s.draw();
-            if(s.y >= H) {
-                snows.splice(i, 1);
-            }
-        });
-    }
-
-    function Snow(x, y, radius) {
-        this.x = x;
-        this.y = y;
-        this.sx = 0;
-        this.sy = 0;
-        this.deg = 0;
-        this.radius = radius;
-        this.ax = Math.random() < 0.5 ? 0.005 : -0.005;
-    }
-
-    Snow.prototype.update = function() {
-        const deltaDeg = Math.random() * 0.6 + 0.2;
-
-        this.sx += this.ax;
-        if(this.sx >= SPEED_LIMIT_X || this.sx <= -SPEED_LIMIT_X) {
-            this.ax *= -1;
-        }
-
-        if(this.sy < SPEED_LIMIT_Y) {
-            this.sy += G;
-        }
-
-        this.deg += deltaDeg;
-        this.x += this.sx;
-        this.y += this.sy;
-    }
-
-    Snow.prototype.draw = function() {
-        const radius = this.radius;
-        ctx.save();
-        ctx.translate(this.x, this.y);
-        ctx.rotate(this.deg * Math.PI / 180);
-        ctx.drawImage(snowImage, -radius, -radius, radius * 2, radius * 2);
-        ctx.restore();
-    }
-
-    function createCanvas() {
-        canvas = document.createElement('canvas');
-        canvas.setAttribute('class','snows')
-        ctx = canvas.getContext('2d');
-    }
 </script>
           
         
@@ -988,7 +833,7 @@
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
-                  <a href="http://weibo.com/" target="_blank" title="微博"><i class="fa fa-fw fa-globe"></i>微博</a>
+                  <a href="http://weibo.com/u/5274782114" target="_blank" title="微博"><i class="fa fa-fw fa-globe"></i>微博</a>
                   
                 </span>
               
@@ -1037,15 +882,9 @@
 
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Gemini</a> v6.3.0</div>
 
 
 
