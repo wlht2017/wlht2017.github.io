@@ -411,13 +411,13 @@ $(document).ready(function() {
 		snowImage = new Image();
 		switch(type){
 			case 'snow':
-				snowImage.src = 'http://218.75.110.40:9104/hVisual/resource/hVisual/swt/snow.png';
+				snowImage.src = 'https://wlht2017-1257187235.cos.ap-shanghai.myqcloud.com/images/snow.png';
 			 	break;
 			case 'heart':
-				snowImage.src = 'http://218.75.110.40:9104/hVisual/resource/hVisual/swt/heartred.png';
+				snowImage.src = 'https://wlht2017-1257187235.cos.ap-shanghai.myqcloud.com/images/heart.png';
 			 	break;
 			default:
-				snowImage.src = 'http://218.75.110.40:9104/hVisual/resource/hVisual/swt/snow.png';
+				snowImage.src = 'https://wlht2017-1257187235.cos.ap-shanghai.myqcloud.com/images/snow.png';
 		}
 		loop();
 	}
